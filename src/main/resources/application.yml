@@ -1,0 +1,47 @@
+#application.name
+  spring:
+    application:
+      name: spatialbrain
+    thymeleaf:
+      cache: false
+      mode: HTML
+      encoding: UTF-8
+      prefix: classpath:/templates/  #resources
+      suffix: .html
+    #mysqldatabase configurations
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/slideseq
+      username: root
+      password: mysql13975431861
+      dbcp2:
+        max-idle: 10
+        max-wait-millis: 10000
+        min-idle: 5
+        initial-size: 5
+    web:
+      resources:
+        static-locations: classpath:/
+
+#port
+  server:
+    port: 8080
+    tomcat:
+      uri-encoding: utf-8
+
+    #session.timeout
+    servlet:
+      session:
+        timeout: 100m
+
+#logs
+  logging:
+    file:
+      name: logs/spatialbrain.log
+
+#debug for yml
+  #Positive matches:（自动配置类启用的：正匹配）
+  #Negative matches:（没有启动，没有匹配成功的自动配置类：负匹配）
+  #Unconditional classes: （没有条件的类）
+  #debug: true
+
