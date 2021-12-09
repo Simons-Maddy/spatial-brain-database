@@ -36,3 +36,28 @@
 2021-12-09 21:11:24.743  INFO 5004 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-12-09 21:11:24.743  INFO 5004 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-12-09 21:11:24.745  INFO 5004 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-09 21:33:12.041  INFO 5004 --- [http-nio-8081-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-09 21:33:12.335  INFO 5004 --- [http-nio-8081-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-09 21:40:00.860  INFO 5004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-09 21:40:00.869  INFO 5004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-09 21:40:20.081  INFO 5698 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 5698 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2021-12-09 21:40:20.083  INFO 5698 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2021-12-09 21:40:20.141  INFO 5698 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-09 21:40:20.142  INFO 5698 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-09 21:40:21.194  INFO 5698 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-12-09 21:40:21.204  INFO 5698 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-09 21:40:21.204  INFO 5698 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-09 21:40:21.268  INFO 5698 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-09 21:40:21.269  INFO 5698 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1126 ms
+2021-12-09 21:40:21.436  INFO 5698 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2021-12-09 21:40:21.620  INFO 5698 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-09 21:40:21.925  INFO 5698 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-09 21:40:21.971  INFO 5698 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-12-09 21:40:21.983  INFO 5698 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 2.268 seconds (JVM running for 3.061)
+2021-12-09 21:40:24.808  INFO 5698 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-09 21:40:24.809  INFO 5698 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-09 21:40:24.810  INFO 5698 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-09 21:40:33.509  INFO 5698 --- [http-nio-8081-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-09 21:40:33.786  INFO 5698 --- [http-nio-8081-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-09 21:43:07.659  INFO 5698 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-09 21:43:07.664  INFO 5698 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

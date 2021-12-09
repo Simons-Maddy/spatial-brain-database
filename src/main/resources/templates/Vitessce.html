@@ -33,7 +33,12 @@
 <div id="container" style="width: 600px;height:600px; margin: auto"></div>
 
 <script>
+  import { VitessceConfig, Component as cm } from '/vitessce';
 
+  const vc = new VitessceConfig("My config");
+  const dataset = vc.addDataset("My dataset");
+  const v1 = vc.addView(dataset, cm.SPATIAL);
+  const v2 = vc.addView(dataset, cm.SCATTERPLOT, { mapping: "X_umap" });
 </script>
 </body>
 </html>
