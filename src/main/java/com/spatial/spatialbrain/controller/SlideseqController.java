@@ -30,6 +30,7 @@ public class SlideseqController {
     @RequestMapping("/slideseq")
     public String searchslideseq(Model m) throws Exception {
         try {
+            /*
             String sql = "SELECT * FROM scp815_brain_locations";
             List<SlideseqLocation> locList = jdbcTemplate.query(sql,
                     new RowMapper<SlideseqLocation>() {
@@ -50,6 +51,7 @@ public class SlideseqController {
 
             m.addAttribute("locations", loclist);
             m.addAttribute("number", number);
+            */
             return "slideseq";
         }catch (Exception e){
             throw new Exception(e);
