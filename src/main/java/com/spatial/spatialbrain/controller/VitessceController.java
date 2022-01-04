@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class VitessceController {
     @RequestMapping("/vitessce")
-    public String hello() {
+    public String tovitessce() {
         return "vitessce";
     }
 }
