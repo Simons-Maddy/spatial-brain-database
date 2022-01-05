@@ -9,25 +9,35 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li role="presentation"><a href="/home">Home</a></li>
-      <li role="presentation" class="active"><a href="/annotation">Annotation</a></li>
-      <li role="presentation"><a href="/vitessce">Vitessce</a></li>
-      <li role="presentation"><a href="/slideseq">Slideseq</a></li>
-    </ul>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li role="presentation"><a href="/home">Home</a></li>
+        <li role="presentation" class="active"><a href="/annotation">Annotation</a></li>
+        <li role="presentation"><a href="/vitessce">Vitessce</a></li>
+        <li role="presentation"><a href="/slideseq">Slideseq</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="page-header" style="width: 50%; margin: 70px auto;">
+    <h1>Spatial Annotation</h1>
   </div>
-</nav>
+  <div style="width: 50%; margin: auto;">
+    <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+      <!-- 切记，这里的name="multipartFile"必须和控制层的参数一致性MultipartFile multipartFile -->
+      barcodes file：<input type="file" name="multipartFile"/><br/>
+      features file：<input type="file" name="multipartFile"/><br/>
+      matrix file：<input type="file" name="multipartFile"/><br/>
+      <input type="submit" value="上传"/><br/>
+    </form>
+  </div>
 
 
-
-<div class="page-header" style="width: 50%; margin: 70px auto;">
-  <h1>Spatial Annotation</h1>
-</div>
-
-<script src="/static/js/jquery-3.6.0.js"></script>
-<script rel="stylesheet" src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+  <script src="/static/js/jquery-3.6.0.js"></script>
+  <script rel="stylesheet" src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
