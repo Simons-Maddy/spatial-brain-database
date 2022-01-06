@@ -19,47 +19,7 @@ import java.util.*;
 
 @Controller
 public class AnnotationController {
-    Model m = new Model() {
-        @Override
-        public Model addAttribute(String attributeName, Object attributeValue) {
-            return null;
-        }
-
-        @Override
-        public Model addAttribute(Object attributeValue) {
-            return null;
-        }
-
-        @Override
-        public Model addAllAttributes(Collection<?> attributeValues) {
-            return null;
-        }
-
-        @Override
-        public Model addAllAttributes(Map<String, ?> attributes) {
-            return null;
-        }
-
-        @Override
-        public Model mergeAttributes(Map<String, ?> attributes) {
-            return null;
-        }
-
-        @Override
-        public boolean containsAttribute(String attributeName) {
-            return false;
-        }
-
-        @Override
-        public Object getAttribute(String attributeName) {
-            return null;
-        }
-
-        @Override
-        public Map<String, Object> asMap() {
-            return null;
-        }
-    };
+    
     /**
      * 首先根据此方法跳转到upload.html界面
      *
@@ -107,6 +67,7 @@ public class AnnotationController {
                 // 创建文件名称
                 String fileName = UUID.randomUUID() + "." + multipartFile[i].getOriginalFilename()
                         .substring(multipartFile[i].getOriginalFilename().indexOf(".")+1);
+
                 // 获取到文件的路径信息
                 /*RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
                 ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) requestAttributes;
