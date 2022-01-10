@@ -7,27 +7,33 @@
     <link href="/static/css/v1/2.b80b5e7b.chunk.css" rel="stylesheet">
     <link href="/static/css/v1/main.4c6fe7db.chunk.css" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <ul class="nav navbar-nav">
-            <li role="presentation"><a href="/home">Home</a></li>
-            <li role="presentation"><a href="/annotation">Annotation</a></li>
-            <li role="presentation"><a href="vitessce">Vitessce</a></li>
-            <li role="presentation" class="active" ><a href="slideseq">Slideseq</a></li>
-        </ul>
+<body style="margin: 0px; height: 100%">
+<div class="modal-body">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li role="presentation"><a href="/home">Home</a></li>
+                <li role="presentation"><a href="/annotation">Annotation</a></li>
+                <li role="presentation"><a href="vitessce">Vitessce</a></li>
+                <li role="presentation" class="active" ><a href="slideseq">Slideseq</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header" style="margin-top: 40px">
+        <h1> Slideseq <small>SCP815-Puck_190921_19</small></h1>
     </div>
-</nav>
-<div class="page-header" style="margin-top: 70px">
-    <h1> Slideseq <small>SCP815-Puck_190921_19</small></h1>
+    <div id="container" style="width: 600px;height:600px; margin: auto"></div>
 </div>
-<div id="container" style="width: 600px;height:600px; margin: auto"></div>
+<div id="footer" class="modal-footer"></div>
+
 <script src="/static/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/static/js/footer.js"></script>
+<script rel="stylesheet" src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
 <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
 <script src="https://cdn.highcharts.com.cn/highcharts/modules/boost.js"></script>
 <script src="https://img.hcharts.cn/highcharts/modules/boost-canvas.js"></script>
-<script rel="stylesheet" src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
 
  <script th:inline="javascript">
      let number = [[${number}]];
