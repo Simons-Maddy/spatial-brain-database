@@ -5063,6 +5063,7 @@ a.badge:focus {
     padding-top: 48px;
     padding-bottom: 48px;
     padding-left: 48px;
+    padding-right: 48px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
@@ -5316,9 +5317,9 @@ a.thumbnail.active {
   vertical-align: bottom;
 }
 .media-heading {
-  margin-top: 0;
-  margin-bottom: 5px;
-  margin-left: 20px;
+  padding-top: 0;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
 .media-list {
   padding-left: 0;
