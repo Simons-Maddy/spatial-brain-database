@@ -1,61 +1,21 @@
-package com.spatial.spatialbrain.controller;
+package com.spatial.spatialbrain.service;
 
-import org.apache.tomcat.util.file.ConfigurationSource;
-import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.spatial.spatialbrain.service.SpatialAnnotation;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@Controller
-public class AnnotationController {
-    
-    /**
-     * 首先根据此方法跳转到upload.html界面
-     *
-     * @return
-     */
-    @RequestMapping("/annotation")
-    public String toannotation() {
-        return "annotation";
-    }
-
-    public String  fileError(Model m){
-        String status = "error";
-        m.addAttribute("status", status);
-        return "annotation";
-    }
-
-    /**
-     * 文件上传
-     *
-     * @param name
-     * @param multipartFile
-     * @return
-     * @throws IllegalStateException
-     * @throws IOException
-     */
-    @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String upload(String name, @RequestParam(value = "multipartFile") MultipartFile[] multipartFile, HttpServletResponse response)
+public class upload {
+    public void upload(String name, @RequestParam(value = "multipartFile") MultipartFile[] multipartFile, HttpServletResponse response)
             throws Exception {
         try {
             Map<String, Object> map = new HashMap<String, Object>();
             for (int i = 0; i < multipartFile.length; i++) {
                 if (Objects.equals(multipartFile[i].getOriginalFilename(), "")) {
-                    return "annotation";
+                    break;
                 }
             }
             Date date = new Date();
@@ -92,29 +52,8 @@ public class AnnotationController {
                 System.out.println(map);
                 // 返回信息
             }
-            annotationResult(filePath);
-            return "result";
         }catch (Exception e){
             throw e;
         }
     }
-
-    /**
-     * 根据此方法跳转到result.html界面
-     *
-     */
-    @RequestMapping("/result")
-    public String toResult(String dir) throws Exception {
-        return "result";
-    }
-
-    /**
-     * 返回分析结果
-     *
-     */
-    public String annotationResult(String dir) throws Exception {
-        String anotate_shell = "python cal_qc_metrics.py --dirpath $"+ dir;
-        return "result";
-    }
 }
-
