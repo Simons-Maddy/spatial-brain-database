@@ -31,4 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
-/src/main/resources/templates/footer.html
+/src/main/resources/templates/base/footer.html

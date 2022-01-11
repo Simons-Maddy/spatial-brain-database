@@ -12,9 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.spatial.spatialbrain.service.SpatialAnnotation;
+
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Controller
@@ -55,6 +58,9 @@ public class AnnotationController {
                     return "annotation";
                 }
             }
+            Date date = new Date();
+            SimpleDateFormat dateFormat= new SimpleDateFormat("yyyyMMdd-hhmmss");
+            String tempPath = dateFormat.format(date);
             for (int i = 0; i < multipartFile.length; i++) {
                 // 设置文件名称
                 map.put("nameParam", i);
@@ -72,14 +78,15 @@ public class AnnotationController {
                 /*RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
                 ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) requestAttributes;
                 String filePath = servletRequestAttributes.getRequest().getServletContext().getRealPath("/") + fileName;*/
-                String filePath = "/Users/chunfu/Desktop/"+ fileName;
+                String filePath = "/Users/chunfu/Desktop/"+ tempPath;
                 // 打印保存路径
                 System.out.println(multipartFile[i].getContentType());
                 System.out.println(filePath);
                 // 保存文件的路径信息
                 map.put("filePath", filePath);
-                // 创建文件
-                File saveFile = new File(filePath);
+                // 创建文件和文件路径
+                File saveFile = new File(filePath,fileName);
+                saveFile.getParentFile().mkdirs();
                 // 文件保存
                 multipartFile[i].transferTo(saveFile);
                 System.out.println(map);
@@ -95,8 +102,10 @@ public class AnnotationController {
      * 根据此方法跳转到result.html界面
      *
      */
-    @RequestMapping(value = "/result")
-    public void annotationResult(String number) throws Exception {
+
+    public String annotationResult(String argument1,String argument2) throws Exception {
+
+        return SpatialAnnotation.execShell("ls", true, argument1, argument2);
 
     }
 }

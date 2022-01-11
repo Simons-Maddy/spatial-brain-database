@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>BGI of brain</title>
@@ -8,18 +8,7 @@
 
 <body>
   <div class="modal-body" style="height: 100%; margin-bottom: 0px;">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <ul class="nav navbar-nav">
-          <li role="presentation"><a href="/home">Home</a></li>
-          <li role="presentation" class="active"><a href="/annotation">Annotation</a></li>
-          <li role="presentation"><a href="/vitessce">Vitessce</a></li>
-          <li role="presentation"><a href="/slideseq">Slideseq</a></li>
-          <li role="presentation"><a href="/help">Help</a></li>
-          <li role="presentation"><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div id="navbar"></div>
 
     <div class="page-header" style="width: 50%; margin: 70px auto;">
       <h1>Spatial Annotation</h1>
@@ -30,15 +19,17 @@
         barcodes file：<input type="file" id="barcodes" name="multipartFile"/><br/>
         features file：<input type="file" id="features" name="multipartFile"/><br/>
         matrix file：<input type="file" id="matrix" name="multipartFile"/><br/>
+        matrix file：<input type="file" id="matrix" name="multipartFile"/><br/>
         <input type="submit" value="Submit" />
       </form>
     </div>
   </div> <!-- modal-body-->
 
-  <div id="footer" class="modal-footer"></div>
+  <div id="footer"></div>
+
   <script src="/static/js/jquery-3.6.0.js"></script>
   <!--script src="/static/js/fileserror.js"></script-->
   <script src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/static/js/footer.js"></script>
+  <script type="text/javascript" src="/static/js/loadNav&Footer.js"></script>
 </body>
 </html>
