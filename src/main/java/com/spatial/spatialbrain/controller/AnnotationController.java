@@ -1,18 +1,9 @@
 package com.spatial.spatialbrain.controller;
 
-import org.apache.tomcat.util.file.ConfigurationSource;
-import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.spatial.spatialbrain.service.SpatialAnnotation;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
@@ -44,7 +35,7 @@ public class AnnotationController {
      * @throws IOException
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String upload(String name, @RequestParam(value = "multipartFile") MultipartFile[] multipartFile, HttpServletResponse response)
+    public String upload(Model m, @RequestParam(value = "multipartFile") MultipartFile[] multipartFile)
             throws Exception {
         try {
             Map<String, Object> map = new HashMap<String, Object>();
@@ -88,13 +79,16 @@ public class AnnotationController {
                 // 返回信息
             }
             annotationResult(filePath);
+            waitPage(m,tempPath);
             return "waitpage";
         }catch (Exception e){
             throw e;
         }
     }
 
-    public String toWaitPage() throws Exception { return "waitpage";}
+    public void waitPage(Model m, String RequestID) throws Exception {
+        m.addAttribute("RequestID",RequestID);
+    }
 
     /**
      * 根据此方法跳转到result.html界面
