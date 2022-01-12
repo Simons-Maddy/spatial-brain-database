@@ -33,11 +33,6 @@ public class AnnotationController {
         return "annotation";
     }
 
-    public String  fileError(Model m){
-        String status = "error";
-        m.addAttribute("status", status);
-        return "annotation";
-    }
 
     /**
      * 文件上传
@@ -93,20 +88,20 @@ public class AnnotationController {
                 // 返回信息
             }
             annotationResult(filePath);
-            return "result";
+            return "waitpage";
         }catch (Exception e){
             throw e;
         }
     }
+
+    public String toWaitPage() throws Exception { return "waitpage";}
 
     /**
      * 根据此方法跳转到result.html界面
      *
      */
     @RequestMapping("/result")
-    public String toResult(String dir) throws Exception {
-        return "result";
-    }
+    public String toResult() throws Exception { return "result";}
 
     /**
      * 返回分析结果
