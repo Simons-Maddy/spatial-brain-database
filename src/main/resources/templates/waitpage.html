@@ -17,24 +17,28 @@
             <!-- Default panel contents -->
             <div class="panel-heading">Job Title:</div>
             <div class="panel-body">
-                <p>This page will be automatically updated in 2 seconds until search is done;</br>
+                <p>This page will be automatically updated in 1 second until search is done;</br>
                     The time for annotation will be long, so we recommend you to keep the Request ID, by which
-                    you can search the annotation result in your free time after the end of process.
+                    you can search for he annotation result in your free time after the end of process.
                 </p>
             </div>
             <!-- Table -->
             <table class="table">
                 <tr>
                     <th>Request ID</th>
-                    <th th:text="#{RequestID}"></th>
+                    <th th:text="${RequestID}"></th>
                 </tr>
                 <tr>
                     <td>Status</td>
                     <td>annotating</td>
                 </tr>
                 <tr>
+                    <td>Submiited at</td>
+                    <td id="subtime"></td>
+                </tr>
+                <tr>
                     <td>Time since submission</td>
-                    <td>$100</td>
+                    <td id="timer"></td>
                 </tr>
             </table>
         </div>
@@ -43,6 +47,7 @@
 
     <script src="/static/js/jquery-3.6.0.js"></script>
     <script type="text/javascript" src="/static/js/loadNav&Footer.js"></script>
+    <script src="/static/js/timer.js"></script>
     <script src="/static/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

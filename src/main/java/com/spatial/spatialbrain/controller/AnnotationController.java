@@ -27,8 +27,6 @@ public class AnnotationController {
 
     /**
      * 文件上传
-     *
-     * @param name
      * @param multipartFile
      * @return
      * @throws IllegalStateException
@@ -45,9 +43,13 @@ public class AnnotationController {
                 }
             }
             Date date = new Date();
-            SimpleDateFormat dateFormat= new SimpleDateFormat("yyyyMMdd-hhmmss");
-            String tempPath = dateFormat.format(date);
-            String filePath = "/Users/chunfu/Desktop/"+ tempPath;
+            String ramStr = "";
+            for (int i = 0; i < 3; i++) {
+                ramStr = ramStr + (char)(Math.random()*26+'A');
+            }
+            SimpleDateFormat dateFormat= new SimpleDateFormat("yyyyMMddhhmmss");
+            String tempDir = dateFormat.format(date)+ramStr;
+            String filePath = "/Users/chunfu/Desktop/"+ tempDir;
             for (int i = 0; i < multipartFile.length; i++) {
                 // 设置文件名称
                 map.put("nameParam", i);
@@ -78,8 +80,10 @@ public class AnnotationController {
                 System.out.println(map);
                 // 返回信息
             }
+            //开始注释文件
             annotationResult(filePath);
-            waitPage(m,tempPath);
+            //显示等待页面
+            waitPage(m,tempDir);
             return "waitpage";
         }catch (Exception e){
             throw e;
