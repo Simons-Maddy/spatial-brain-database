@@ -1,11 +1,3 @@
-$(function(){
-    $(document).ready(function(){
-        loadNavbar();
-        loadFooter();
-        navAction();
-    });
-})
-
 function loadNavbar() {
     let navbar = document.getElementById("navbar")
     navbar.outerHTML =
@@ -55,3 +47,11 @@ function navAction(){
     if(String(url).match("upload") || String(url).match("result"))
         navUlChildren[1].className = "active";
         }
+
+$(function(){
+    $(document).ready(function(){
+        loadNavbar();
+        loadFooter();
+        navAction();
+    });
+})

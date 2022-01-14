@@ -1,16 +1,15 @@
-
-function LinkStyle() {
-    var urlstr = location.href;
-    if (document.getElementsByTagName('a')) {
-        var arrLink = document.getElementsByTagName('a');
-        for (i = 0; i < arrLink.length; i++) {
-            var link = arrLink[i];
-            var href = link.getAttribute("href");
-            if (href.indexOf('#') > -1 && urlstr.indexOf(href) > -1) {
-                link.style.backgroundColor = "Silver";
-            } else {
-                link.style.backgroundColor = 'WhiteSmoke';
-            }
+function navAction(){
+    let url = document.location;
+    let navUl = document.querySelector("nav ul");
+    let navUlChildren = navUl.children;
+    for (let i =0; i < navUlChildren.length; i++)
+    {
+        if(String(url).match(navUlChildren[i].id)){
+            navUlChildren[i].className = "active";
         }
+        else
+            delete navUlChildren[i].className;
     }
+    if(String(url).match("upload") || String(url).match("result"))
+        navUlChildren[1].className = "active";
 }

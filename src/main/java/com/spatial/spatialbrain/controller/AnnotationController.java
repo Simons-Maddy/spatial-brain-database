@@ -1,5 +1,6 @@
 package com.spatial.spatialbrain.controller;
 
+import com.spatial.spatialbrain.service.SpatialAnnotation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -99,14 +100,17 @@ public class AnnotationController {
      *
      */
     @RequestMapping("/result")
-    public String toResult() throws Exception { return "result";}
+    public String toResult() throws Exception {
+        return "result";
+    }
 
     /**
      * 返回分析结果
      *
      */
     public String annotationResult(String dir) throws Exception {
-        String anotate_shell = "python cal_qc_metrics.py --dirpath $"+ dir;
+        String annotateShell = "python cal_qc_metrics.py --dirpath $"+ dir;
+        SpatialAnnotation.execShell(annotateShell, true);
         return "result";
     }
 }

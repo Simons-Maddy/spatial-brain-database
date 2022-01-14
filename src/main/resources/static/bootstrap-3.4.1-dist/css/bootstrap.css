@@ -6033,7 +6033,6 @@ button.close {
   line-height: 1.42857143;
 }
 .modal-body {
-  height: auto;
   position: relative;
   padding: 40px;
   margin-bottom: 90px;
