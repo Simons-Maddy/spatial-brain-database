@@ -1,5 +1,6 @@
 package com.spatial.spatialbrain.controller;
 
+import com.spatial.spatialbrain.service.ReadFile;
 import com.spatial.spatialbrain.service.SpatialAnnotation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 @Controller
 public class AnnotationController {
@@ -99,7 +101,7 @@ public class AnnotationController {
     public void waitPage(Model m, String RequestID,String filePath) throws Exception {
         m.addAttribute("RequestID",RequestID);
         //监控文件变化
-        //FileMonite(filePath, true);
+        //FileMonite(filePath);
     }
 
     /**
@@ -115,27 +117,45 @@ public class AnnotationController {
      * 进行注释分析
      *
      */
-    public void annotationResult(String dir) throws Exception {
+    public String annotationResult(String dir) throws Exception {
         File file = new File(dir +"logs");
         file.mkdirs();
         String pypath = "src/main/java/com/spatial/spatialbrain/service/cal_qc_metrics.py";
         String annotateShell = "python " + pypath +" --dirpath "+ dir  + " 1>" + dir + "logs/cal_qc_metrics.log " +
                 "2>" + dir + "logs/error.log";
         String result = SpatialAnnotation.execShell(annotateShell, true);
-        System.out.println(result);
+        if(result.matches("done")){
+            ReadFile readfile = new ReadFile();
+            String fileContext = readfile.ReadFile(dir+"adata_a1p1.obs.csv");
+            System.out.println(fileContext);
+            return "result";
+        }else {
+            return "annoError";
+        }
     }
 
-    public void FileMonite(String dirPath, boolean onoff) throws Exception {
+    public void FileMonite(String dirPath) throws Exception {
         //WatchService是一个接口,利用Filesystems类获取FileSystem，然后根据这个类，new一个WatchService。
+        //监听文件
+        String target_file = "t.txt";
+        //构造监听服务
         WatchService watchService= FileSystems.getDefault().newWatchService();
+        //监听注册，监听实体的创建、修改、删除事件，并以高频率(每隔2秒一次，默认是10秒)监听
         Paths.get(dirPath).register(watchService,
+                new WatchEvent.Kind[]{
                 StandardWatchEventKinds.ENTRY_CREATE,
                 StandardWatchEventKinds.ENTRY_DELETE,
-                StandardWatchEventKinds.ENTRY_MODIFY);
+                StandardWatchEventKinds.ENTRY_MODIFY});
         while (true){
-            WatchKey key=watchService.take();
-            for(WatchEvent<?>evet:key.pollEvents()){
-                System.out.println(evet.context()+"文件发生了"+evet.kind()+"事件");
+            //每隔2秒拉取监听key
+            WatchKey key = watchService.poll(2, TimeUnit.SECONDS);
+            //监听key为null,则跳过
+            if (key == null) {
+                continue;
+            }
+            //获取监听事件
+            for(WatchEvent<?> event : key.pollEvents()){
+                System.out.println(event.context()+"文件发生了"+event.kind()+"事件");
             }
             boolean vaild = key.reset();
             if(!vaild){

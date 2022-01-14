@@ -34,6 +34,8 @@ public class SpatialAnnotation {
     private static String readStream(BufferedReader bufferedReader, boolean log) throws IOException {
         StringBuffer sb = new StringBuffer();
         String line;
+        //返回结果
+        sb.append("done");
         while ((line = bufferedReader.readLine()) != null) {
             sb.append(line).append("\n");
             if (log) {

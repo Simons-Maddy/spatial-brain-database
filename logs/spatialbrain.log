@@ -1207,3 +1207,353 @@ java.lang.NullPointerException: Cannot invoke "org.apache.catalina.Wrapper.getMu
 2022-01-14 16:37:14.120  INFO 59188 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-01-14 16:37:14.120  INFO 59188 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-01-14 16:37:14.121  INFO 59188 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-14 21:58:22.815  INFO 59519 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59519 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 21:58:22.818  INFO 59519 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 21:58:22.878  INFO 59519 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-14 21:58:22.879  INFO 59519 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-14 21:58:23.890  INFO 59519 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 21:58:23.900  INFO 59519 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 21:58:23.901  INFO 59519 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 21:58:23.957  INFO 59519 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 21:58:23.958  INFO 59519 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1079 ms
+2022-01-14 21:58:24.076  INFO 59519 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 21:58:24.255  INFO 59519 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 21:58:24.418  INFO 59519 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 21:58:24.454  INFO 59519 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 21:58:24.467  INFO 59519 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 2.074 seconds (JVM running for 2.876)
+2022-01-14 21:58:30.098  INFO 59519 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 21:58:30.098  INFO 59519 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 21:58:30.100  INFO 59519 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-14 21:59:32.980  WARN 59519 --- [http-nio-8081-exec-6] s.w.m.s.StandardServletMultipartResolver : Failed to perform cleanup of multipart items
+
+java.lang.NullPointerException: Cannot invoke "org.apache.catalina.Wrapper.getMultipartConfigElement()" because the return value of "org.apache.catalina.connector.Request.getWrapper()" is null
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2846) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.Request.getParts(Request.java:2823) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:1098) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:359) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.cleanupMultipart(StandardServletMultipartResolver.java:132) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.cleanupMultipart(DispatcherServlet.java:1246) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1103) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:209) ~[cors-filter-2.9.jar:2.9]
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:244) ~[cors-filter-2.9.jar:2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-01-14 22:00:51.323  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:00:51.325  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:00:51.371  INFO 59528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-14 22:00:51.371  INFO 59528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-14 22:00:52.413  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:00:52.424  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:00:52.424  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:00:52.495  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:00:52.496  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1125 ms
+2022-01-14 22:00:52.652  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:00:52.818  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:00:52.956  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:00:52.996  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:00:53.009  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 2.033 seconds (JVM running for 2.75)
+2022-01-14 22:00:56.273  INFO 59528 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 22:00:56.274  INFO 59528 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 22:00:56.274  INFO 59528 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-01-14 22:10:03.515  WARN 59528 --- [http-nio-8081-exec-6] s.w.m.s.StandardServletMultipartResolver : Failed to perform cleanup of multipart items
+
+java.lang.NullPointerException: Cannot invoke "org.apache.catalina.Wrapper.getMultipartConfigElement()" because the return value of "org.apache.catalina.connector.Request.getWrapper()" is null
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2846) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.Request.getParts(Request.java:2823) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.RequestFacade.getParts(RequestFacade.java:1098) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at javax.servlet.http.HttpServletRequestWrapper.getParts(HttpServletRequestWrapper.java:359) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.cleanupMultipart(StandardServletMultipartResolver.java:132) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.cleanupMultipart(DispatcherServlet.java:1246) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1103) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.10.jar:5.3.10]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.53.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:209) ~[cors-filter-2.9.jar:2.9]
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:244) ~[cors-filter-2.9.jar:2.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.10.jar:5.3.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.53.jar:9.0.53]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-01-14 22:10:03.792  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:10:03.793  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:10:04.078  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:10:04.080  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:10:04.080  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:10:04.096  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:10:04.097  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 301 ms
+2022-01-14 22:10:04.130  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:10:04.176  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:10:04.222  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:10:04.230  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:10:04.234  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.625 seconds (JVM running for 554.026)
+2022-01-14 22:10:04.236  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:10:14.795  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:10:14.796  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:10:14.986  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:10:14.986  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:10:14.987  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:10:14.995  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:10:14.995  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 196 ms
+2022-01-14 22:10:15.033  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:10:15.071  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:10:15.109  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:10:15.117  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:10:15.121  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.35 seconds (JVM running for 564.913)
+2022-01-14 22:10:15.123  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:10:21.665  INFO 59528 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 22:10:21.666  INFO 59528 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 22:10:21.667  INFO 59528 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-14 22:10:52.417  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:10:52.417  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:10:52.597  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:10:52.597  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:10:52.597  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:10:52.606  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:10:52.606  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2022-01-14 22:10:52.630  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:10:52.681  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:10:52.725  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:10:52.733  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:10:52.737  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.342 seconds (JVM running for 602.53)
+2022-01-14 22:10:52.738  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:13:48.820  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:13:48.821  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:13:48.965  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:13:48.966  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:13:48.966  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:13:48.981  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:13:48.981  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 159 ms
+2022-01-14 22:13:49.010  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:13:49.054  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:13:49.083  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:13:49.090  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:13:49.094  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.481 seconds (JVM running for 778.892)
+2022-01-14 22:13:49.095  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:16:56.092  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:16:56.092  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:16:56.262  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:16:56.262  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:16:56.263  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:16:56.272  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:16:56.272  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 176 ms
+2022-01-14 22:16:56.306  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:16:56.352  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:16:56.394  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:16:56.402  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:16:56.406  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.561 seconds (JVM running for 966.208)
+2022-01-14 22:16:56.407  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:17:37.434  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:17:37.435  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:17:37.569  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:17:37.570  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:17:37.570  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:17:37.577  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:17:37.577  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 141 ms
+2022-01-14 22:17:37.603  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:17:37.642  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:17:37.676  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:17:37.682  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:17:37.686  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.27 seconds (JVM running for 1007.489)
+2022-01-14 22:17:37.687  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:18:56.291  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:18:56.291  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:18:56.417  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:18:56.417  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:18:56.418  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:18:56.425  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:18:56.425  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 133 ms
+2022-01-14 22:18:56.454  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:18:56.483  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:18:56.513  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:18:56.519  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:18:56.523  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 1.381 seconds (JVM running for 1086.328)
+2022-01-14 22:18:56.524  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:22:26.419  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:22:26.419  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:22:26.612  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:22:26.613  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:22:26.614  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:22:26.623  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:22:26.623  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 202 ms
+2022-01-14 22:22:26.646  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:22:26.685  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:22:26.734  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:22:26.744  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:22:26.748  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.518 seconds (JVM running for 1296.593)
+2022-01-14 22:22:26.749  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:24:03.864  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:24:03.865  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:24:04.120  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:24:04.121  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:24:04.122  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:24:04.129  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:24:04.129  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 261 ms
+2022-01-14 22:24:04.160  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:24:04.189  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:24:04.213  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:24:04.218  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:24:04.221  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.388 seconds (JVM running for 1394.069)
+2022-01-14 22:24:04.222  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:25:07.626  INFO 59528 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 22:25:07.626  INFO 59528 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 22:25:07.628  INFO 59528 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-14 22:25:10.191  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:25:10.191  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:25:10.347  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:25:10.347  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:25:10.348  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:25:10.356  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:25:10.356  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 163 ms
+2022-01-14 22:25:10.390  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:25:10.443  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:25:10.488  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:25:10.498  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:25:10.504  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.505 seconds (JVM running for 1460.353)
+2022-01-14 22:25:10.506  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:25:17.243  INFO 59528 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 22:25:17.244  INFO 59528 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 22:25:17.245  INFO 59528 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-14 22:26:06.616  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:26:06.617  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:26:06.784  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:26:06.785  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:26:06.785  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:26:06.793  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:26:06.793  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 175 ms
+2022-01-14 22:26:06.838  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:26:06.885  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:26:06.924  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:26:06.931  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:26:06.935  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.342 seconds (JVM running for 1516.786)
+2022-01-14 22:26:06.936  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:26:08.412  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:26:08.412  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:26:08.543  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:26:08.544  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:26:08.544  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:26:08.552  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:26:08.552  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 139 ms
+2022-01-14 22:26:08.574  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:26:08.606  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:26:08.637  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:26:08.643  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:26:08.647  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.25 seconds (JVM running for 1518.498)
+2022-01-14 22:26:08.648  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:26:16.235  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:26:16.235  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:26:16.501  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:26:16.502  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:26:16.502  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:26:16.511  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:26:16.511  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 274 ms
+2022-01-14 22:26:16.550  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:26:16.612  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:26:16.664  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:26:16.677  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:26:16.683  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.477 seconds (JVM running for 1526.534)
+2022-01-14 22:26:16.684  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:26:18.180  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59528 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:26:18.180  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:26:18.329  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:26:18.330  INFO 59528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:26:18.330  INFO 59528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:26:18.337  INFO 59528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:26:18.337  INFO 59528 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 156 ms
+2022-01-14 22:26:18.365  INFO 59528 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:26:18.402  INFO 59528 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:26:18.435  INFO 59528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:26:18.442  INFO 59528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:26:18.447  INFO 59528 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.293 seconds (JVM running for 1528.298)
+2022-01-14 22:26:18.448  INFO 59528 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-01-14 22:26:33.588  INFO 59654 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 59654 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-14 22:26:33.590  INFO 59654 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-14 22:26:33.643  INFO 59654 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-14 22:26:33.643  INFO 59654 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-14 22:26:34.665  INFO 59654 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-14 22:26:34.675  INFO 59654 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 22:26:34.675  INFO 59654 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-14 22:26:34.740  INFO 59654 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 22:26:34.740  INFO 59654 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
+2022-01-14 22:26:34.904  INFO 59654 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-14 22:26:35.087  INFO 59654 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 22:26:35.245  INFO 59654 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 22:26:35.280  INFO 59654 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-14 22:26:35.291  INFO 59654 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 2.05 seconds (JVM running for 2.581)
+2022-01-14 22:26:42.359  INFO 59654 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 22:26:42.359  INFO 59654 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 22:26:42.360  INFO 59654 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
