@@ -576,3 +576,112 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [uploa
 2022-01-15 12:11:32.216  INFO 60409 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-01-15 12:11:32.216  INFO 60409 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-01-15 12:11:32.218  INFO 60409 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-01-15 15:53:10.200  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 60893 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-15 15:53:10.203  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-15 15:53:10.261  INFO 60893 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-15 15:53:10.262  INFO 60893 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-15 15:53:11.269  INFO 60893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-15 15:53:11.279  INFO 60893 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-15 15:53:11.280  INFO 60893 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-15 15:53:11.333  INFO 60893 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-15 15:53:11.333  INFO 60893 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
+2022-01-15 15:53:11.449  INFO 60893 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-15 15:53:11.625  INFO 60893 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-15 15:53:11.753  INFO 60893 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-15 15:53:11.785  INFO 60893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-15 15:53:11.795  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 1.979 seconds (JVM running for 2.785)
+2022-01-15 15:53:21.614  INFO 60893 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-15 15:53:21.614  INFO 60893 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-15 15:53:21.616  INFO 60893 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-15 15:56:36.624  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 60893 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-15 15:56:36.625  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-15 15:56:37.011  INFO 60893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-15 15:56:37.012  INFO 60893 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-15 15:56:37.013  INFO 60893 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-15 15:56:37.028  INFO 60893 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-15 15:56:37.028  INFO 60893 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 401 ms
+2022-01-15 15:56:37.105  INFO 60893 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-15 15:56:37.174  INFO 60893 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-15 15:56:37.187  INFO 60893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-15 15:56:37.194  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.75 seconds (JVM running for 208.177)
+2022-01-15 15:56:37.201  INFO 60893 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   MultipartAutoConfiguration#multipartConfigElement matched:
+      - @ConditionalOnMissingBean (types: javax.servlet.MultipartConfigElement,org.springframework.web.multipart.commons.CommonsMultipartResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2022-01-15 15:56:38.661  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : Starting SpatialbrainApplication using Java 16.0.2 on xiaochunfudeMacBook-Pro.local with PID 60893 (/Users/chunfu/IdeaProjects/spatialbrain/target/classes started by chunfu in /Users/chunfu/IdeaProjects/spatialbrain)
+2022-01-15 15:56:38.662  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : No active profile set, falling back to default profiles: default
+2022-01-15 15:56:38.847  INFO 60893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-01-15 15:56:38.848  INFO 60893 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-15 15:56:38.848  INFO 60893 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-01-15 15:56:38.860  INFO 60893 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-15 15:56:38.860  INFO 60893 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 196 ms
+2022-01-15 15:56:38.897  INFO 60893 --- [restartedMain] c.spatial.spatialbrain.config.LogConfig  : ==========print log==========
+2022-01-15 15:56:38.944  INFO 60893 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-15 15:56:38.984  INFO 60893 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-15 15:56:38.992  INFO 60893 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-15 15:56:38.996  INFO 60893 --- [restartedMain] c.s.s.SpatialbrainApplication            : Started SpatialbrainApplication in 0.365 seconds (JVM running for 209.98)
+2022-01-15 15:56:38.999  INFO 60893 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   MultipartAutoConfiguration#multipartConfigElement:
+      Did not match:
+         - @ConditionalOnMissingBean (types: javax.servlet.MultipartConfigElement,org.springframework.web.multipart.commons.CommonsMultipartResolver; SearchStrategy: all) found beans of type 'javax.servlet.MultipartConfigElement' getMultipartConfig (OnBeanCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+

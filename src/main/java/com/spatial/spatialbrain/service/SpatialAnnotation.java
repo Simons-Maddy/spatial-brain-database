@@ -14,7 +14,7 @@ public class SpatialAnnotation {
             shell = shell +" "+ args[i];
         }
         if(log){
-            System.out.println("shell is : { "+ shell + " }");//输出shell操作
+            System.out.println("cmd is : { "+ shell + " }");//输出shell操作
         }
         try{
             Process ps=Runtime.getRuntime().exec(new String[]{"sh","-c",shell});//执行
